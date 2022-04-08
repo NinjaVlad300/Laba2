@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 public class Calculater {
+
     public LinkedHashMap<String, Double[]> lhm = new LinkedHashMap<>();
 
     private void geometric(ArrayList <double[]> arr) {

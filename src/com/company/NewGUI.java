@@ -11,6 +11,7 @@ public class NewGUI {
     private JTextField textField1;
     private JTextField textField2;
     private JPanel panel;
+    private JButton выходButton;
 
     public NewGUI() {
         Calculater calc = new Calculater();
@@ -26,7 +27,7 @@ public class NewGUI {
                     calc.calculater(r.Reading(textField1.getText()));
                     JOptionPane.showMessageDialog(null, "Файл загружен", "Import", JOptionPane.PLAIN_MESSAGE);
                 } catch (Exception ex) {
-                    JOptionPane.showMessageDialog(null, "Файл не найден", "Error", JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Ошибка в пути файла", "Error", JOptionPane.PLAIN_MESSAGE);
                 }
             }
         });
@@ -43,6 +44,12 @@ public class NewGUI {
             }
         });
 
+        выходButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
     }
 
     public JPanel getJPanel(){

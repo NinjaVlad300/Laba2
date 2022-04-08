@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Reader {
+
     public ArrayList<double[]> Reading(String st) throws IOException {
 
         //10 вариант
